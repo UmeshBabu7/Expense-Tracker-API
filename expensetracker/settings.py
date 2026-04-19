@@ -29,8 +29,9 @@ INSTALLED_APPS = [
 ]
 
 THIRD_PART_APPS = ["rest_framework"]
+LOCAL_APPS = ["accounts"]
 
-INSTALLED_APPS += THIRD_PART_APPS
+INSTALLED_APPS += THIRD_PART_APPS + LOCAL_APPS
 
 MIDDLEWARE = [
     "django.middleware.security.SecurityMiddleware",
@@ -72,6 +73,7 @@ DATABASES = {
         config("DATABASE_URL", default=f"sqlite:///{BASE_DIR / 'db.sqlite3'}")
     )
 }
+AUTH_USER_MODEL = "accounts.User"
 
 
 # Password validation
