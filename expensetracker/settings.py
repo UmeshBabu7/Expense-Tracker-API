@@ -29,7 +29,7 @@ INSTALLED_APPS = [
 ]
 
 THIRD_PART_APPS = ["rest_framework"]
-LOCAL_APPS = ["accounts"]
+LOCAL_APPS = ["accounts", "expenses"]
 
 INSTALLED_APPS += THIRD_PART_APPS + LOCAL_APPS
 
